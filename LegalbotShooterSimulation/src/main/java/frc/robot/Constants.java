@@ -24,6 +24,8 @@ public final class Constants {
         public static final double kGearRatio = 0;
         public static final double kAngleOffset = 0;
 
+        public static final double kEncoderTicksPerRotation = 0;
+
         // PIDF
         public static final double kP = 0;
         public static final double kI = 0;
@@ -31,8 +33,8 @@ public final class Constants {
         public static final double kF = 0;
 
         // Feedforwards
-        public static final double kArbitraryFF = 0;
-        public static final double kGravityFF = 0;
+        public static final double kArbitraryFF = 0; // To be used while mechanism is not moving to account for static offset (?)
+        public static final double kGravityFF = 0; // To be used while the mechanism is moving, to counteract gravity (?)
 
         // Motion Magic values
         public static final double kMMCruiseVelocity = 0; // MM = Motion Magic
