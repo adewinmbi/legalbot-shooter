@@ -21,7 +21,7 @@ public final class Constants {
     public static final class HoodConstants {
         public static final int kTalonID = 0;
 
-        public static final double kGearRatio = 0;
+        public static final double kGearRatio = 26.1 / 1.5;
         public static final double kAngleOffset = 0;
 
         public static final double kEncoderTicksPerRotation = 0;

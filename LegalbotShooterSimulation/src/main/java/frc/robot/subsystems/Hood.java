@@ -44,7 +44,7 @@ public class Hood {
 
     // Convert degrees to native units
     private double degreesToTicks(double degrees) {
-        return (degrees / 360) * HoodConstants.kEncoderTicksPerRotation;
+        return (degrees / 360) * HoodConstants.kGearRatio * HoodConstants.kEncoderTicksPerRotation;
     }
 
 }
