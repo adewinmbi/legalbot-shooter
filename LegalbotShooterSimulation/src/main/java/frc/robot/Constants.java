@@ -19,30 +19,30 @@ public final class Constants {
     }
 
     public static final class HoodConstants {
-        public static final int kHoodTalonID = 0;
+        public static final int kTalonID = 0;
 
-        public static final double kHoodGearRatio = 0;
-        public static final double kHoodAngleOffset = 0;
+        public static final double kGearRatio = 0;
+        public static final double kAngleOffset = 0;
 
         // PIDF
-        public static final double kHoodP = 0;
-        public static final double kHoodI = 0;
-        public static final double kHoodD = 0;
-        public static final double kHoodF = 0;
+        public static final double kP = 0;
+        public static final double kI = 0;
+        public static final double kD = 0;
+        public static final double kF = 0;
 
         // Feedforwards
-        public static final double kHoodArbitraryFF = 0;
-        public static final double kHoodGravityFF = 0;
+        public static final double kArbitraryFF = 0;
+        public static final double kGravityFF = 0;
 
         // Motion Magic values
-        public static final double kHoodMMCruiseVelocity = 0; // MM = Motion Magic
-        public static final double kHoodMMAcceleration = 0;
+        public static final double kMMCruiseVelocity = 0; // MM = Motion Magic
+        public static final double kMMAcceleration = 0;
 
         // System identification coefficients
-        public static final double kHoodS = 0;
-        public static final double kHoodV = 0;
-        public static final double kHoodA = 0;
-        public static final double kHoodCos = 0;
+        public static final double kS = 0;
+        public static final double kV = 0;
+        public static final double kA = 0;
+        public static final double kCos = 0;
     }
 
 }
