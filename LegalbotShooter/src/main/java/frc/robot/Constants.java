@@ -39,6 +39,7 @@ public final class Constants {
         // Motion Magic values
         public static final double kMMCruiseVelocity = 0; // MM = Motion Magic
         public static final double kMMAcceleration = 0;
+        public static final int kSCurveStrength = 0;
 
         // System identification coefficients
         public static final double kS = 0;

@@ -26,6 +26,7 @@ public class Hood {
         talonSRX.config_kF(0, HoodConstants.kF);
         talonSRX.configMotionCruiseVelocity(HoodConstants.kMMCruiseVelocity);
         talonSRX.configMotionAcceleration(HoodConstants.kMMAcceleration);
+        talonSRX.configMotionSCurveStrength(HoodConstants.kSCurveStrength);
         talonSRX.setNeutralMode(NeutralMode.Coast);
     }
 
