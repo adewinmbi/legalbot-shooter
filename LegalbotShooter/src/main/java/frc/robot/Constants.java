@@ -32,9 +32,8 @@ public final class Constants {
         public static final double kD = 0;
         public static final double kF = 0;
 
-        // Feedforwards
-        public static final double kArbitraryFF = 0; // To be used while mechanism is not moving to account for static offset (?)
-        public static final double kGravityFF = 0; // To be used while the mechanism is moving, to counteract gravity (?)
+        // Feedforward
+        public static final double kGravityFF = 0; // 
 
         // Motion Magic values
         public static final double kMMCruiseVelocity = 0; // MM = Motion Magic

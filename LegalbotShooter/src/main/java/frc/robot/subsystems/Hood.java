@@ -31,6 +31,7 @@ public class Hood {
     }
 
     // If the velocity is above the minimum required for movement, the mechanism is moving.
+    // TODO: Dynamically update feedforward to account for velocity, acceleration, and sign if the mechanism is moving.
     private boolean isMoving() {
         return Math.abs(talonSRX.getSelectedSensorVelocity()) > kStaticFrictionDeadband;
     }
@@ -46,10 +47,10 @@ public class Hood {
     public void setAngleMotionMagic(double angle) {
         if (isMoving()) {
             talonSRX.set(ControlMode.MotionMagic, degreesToTicks(angle) + kTicksOffset, 
-            DemandType.ArbitraryFeedForward, getFFIfMoving());
+            DemandType.ArbitraryFeedForward, getFF());
         } else {
             talonSRX.set(ControlMode.MotionMagic, degreesToTicks(angle) + kTicksOffset,
-            DemandType.ArbitraryFeedForward, getFFIfNotMoving(angle - getAngle()));
+            DemandType.ArbitraryFeedForward, getFF());
         }
     }
 
@@ -62,15 +63,8 @@ public class Hood {
     the purpose of isolating the shooter code from the rest of the 
     robot in this repository. */
 
-    private double getFFIfMoving() {
+    private double getFF() {
         return HoodConstants.kGravityFF * Math.cos(degreesToRadians(getAngle()));
-    }
-
-    // Use arbitrary FF multiplied by sign of error to hold position in right direction
-    private double getFFIfNotMoving(double error) {
-        double sign = Math.signum(error);
-        return HoodConstants.kGravityFF * Math.cos(degreesToRadians(getAngle()))
-        + sign * HoodConstants.kArbitraryFF;
     }
 
     // Convert degrees of arm to native units
